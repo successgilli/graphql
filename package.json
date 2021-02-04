@@ -1,0 +1,47 @@
+{
+  "name": "graphql_es",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./dist/index.js",
+    "start:dev": "nodemon src/index.js --exec babel-node -e",
+    "prod": "npm run build && npm run start",
+    "build": "npm run clean && npm run transpile",
+    "transpile": "babel src -d dist",
+    "clean": "rm -rf dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/successgilli/graphql.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/successgilli/graphql/issues"
+  },
+  "homepage": "https://github.com/successgilli/graphql#readme",
+  "dependencies": {
+    "@apollo/client": "^3.2.9",
+    "@graphql-tools/links": "^7.0.3",
+    "casual": "^1.6.2",
+    "express": "^4.17.1",
+    "express-graphql": "^0.12.0",
+    "graphql": "^15.5.0",
+    "graphql-tools": "^7.0.2",
+    "lodash": "^4.17.20",
+    "mongoose": "^5.11.14",
+    "nodemon": "^2.0.7",
+    "sequelize": "^6.5.0",
+    "sqlite": "^4.0.19",
+    "sqlite3": "^4.1.1",
+    "subscriptions-transport-ws": "^0.9.18"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.13",
+    "@babel/core": "^7.12.13",
+    "@babel/node": "^7.12.13",
+    "@babel/preset-env": "^7.12.13"
+  }
+}
